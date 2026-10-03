@@ -35,11 +35,13 @@ The [paired handshake walkthrough](docs/PAIRED-HANDSHAKE.md) shows interest, dec
 
 ## Exact test result
 
-42 unittest methods passed (26 document-validator methods and 16 pair-checker methods). The methods also exercise multiple hostile vectors through subtests. Coverage includes all four example documents, a directory, duplicate keys, size/depth boundaries, encoded data, malformed root/kind, URLs, fake platform attestation, wrong versions, unknown executable fields, time boundaries, duplicate surface labels, and a remotely supplied approval field.
+45 unittest methods passed (26 document-validator methods, 16 pair-checker methods, and three documentation-navigation methods). The methods also exercise multiple hostile vectors through subtests. Coverage includes all four example documents, a directory, duplicate keys, size/depth boundaries, encoded data, malformed root/kind, URLs, fake platform attestation, wrong versions, unknown executable fields, time boundaries, duplicate surface labels, and a remotely supplied approval field.
 
 Pair coverage includes ID and each URL mismatch, equality/expiry/future-clock boundaries, both decisions, duplicates, conflicting decisions and changed messages, invalid previous responses, strict input limits, fractional-second precision rejection, and CLI success/failure output.
 
 The dated hello CLI, private System manifest CLI, empty directory CLI, and dated pair CLI also passed.
+
+Documentation-navigation checks verify the landing page’s link to the GitHub-rendered human guide and separate machine index, local landing-page file and in-page targets, and the guide’s local file and simple heading targets. They do not fetch external URLs or verify hosted Markdown rendering.
 
 ## Explicitly outside scope
 
