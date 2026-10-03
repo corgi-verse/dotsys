@@ -30,12 +30,13 @@ The [paired handshake walkthrough](docs/PAIRED-HANDSHAKE.md) shows interest, dec
 - Unique local surface names and paths; different hello sender and recipient URLs.
 - Hello expiration, maximum 24-hour duration, and five-minute future-clock allowance.
 - Future timestamp checks for cards and responses as a conservative local screen.
-- Local pair checking: exact hello ID and reversed URLs, response no earlier than hello and strictly before its expiry, with both documents checked at one clock snapshot. The pair checker conservatively rejects timestamps with more than six fractional-second digits to avoid datetime precision truncation; this does not narrow the protocol schemas.
+- All local timestamp parsing, including explicit CLI clocks, conservatively rejects more than six fractional-second digits before datetime conversion, which would otherwise silently truncate them. This is a reference-tool precision limit, not a change to the protocol schemas.
+- Local pair checking: exact hello ID and reversed URLs, response no earlier than hello and strictly before its expiry, with both documents checked at one clock snapshot.
 - Optional comparison against a supplied locally retained terminal response: identical parsed documents are duplicate no-ops; changed responses are rejected. No state is saved.
 
 ## Exact test result
 
-45 unittest methods passed (26 document-validator methods, 16 pair-checker methods, and three documentation-navigation methods). The methods also exercise multiple hostile vectors through subtests. Coverage includes all four example documents, a directory, duplicate keys, size/depth boundaries, encoded data, malformed root/kind, URLs, fake platform attestation, wrong versions, unknown executable fields, time boundaries, duplicate surface labels, and a remotely supplied approval field.
+48 unittest methods passed (29 document-validator methods, 16 pair-checker methods, and three documentation-navigation methods). The methods also exercise multiple hostile vectors through subtests. Coverage includes all four example documents, a directory, duplicate keys, size/depth boundaries, encoded data, malformed root/kind, URLs, fake platform attestation, wrong versions, unknown executable fields, time boundaries, duplicate surface labels, and a remotely supplied approval field. Timestamp regressions cover unsupported precision, supported microsecond future/expiry/lifetime boundaries, and clean CLI rejection.
 
 Pair coverage includes ID and each URL mismatch, equality/expiry/future-clock boundaries, both decisions, duplicates, conflicting decisions and changed messages, invalid previous responses, strict input limits, fractional-second precision rejection, and CLI success/failure output.
 
