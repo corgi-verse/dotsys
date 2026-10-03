@@ -1,6 +1,7 @@
 # Dotsys documentation
 
 - [Adopt a personal System](ADOPTION.md): complete setup and operating prompt, with Surface as the default first project.
+- [Recipes and Rule Library brainstorm](RULE-LIBRARY-BRAINSTORM.md): a proposed creative community, shareable processes, and prompt-based rule setup; not implemented.
 - [Research and adoption strategy](RESEARCH-AND-ADOPTION.md): source-backed comparisons, legitimate discovery, pilot evidence, and release gates.
 - [Paired handshake walkthrough](PAIRED-HANDSHAKE.md): offline hello/response review, duplicates, expiry, and separate local authority.
 - [Protocol specification](../PROTOCOL.md): normative Dotsys 0.1.0 contract and security boundaries.
