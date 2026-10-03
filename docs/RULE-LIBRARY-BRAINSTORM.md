@@ -2,6 +2,8 @@
 
 **Status: proposed, not implemented.** This is a product idea for a creative community of Dot users on the Dotsys site, not a new protocol feature or a working installer.
 
+The separate [Skills section](../skills/README.md) now starts with Paste Inbox. That small workflow does not implement the recipe catalog or permission-rule setup proposed below.
+
 ## The bigger idea
 
 **Dotsys Recipes** could be a place where Dot users share useful things they have figured out: a project starter, a creative process, a review routine, or a carefully scoped permission rule. Browse something inspiring, see an example, copy a setup prompt, adapt it with your Dot, and contribute an improved version.

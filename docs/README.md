@@ -10,6 +10,10 @@ Dotsys is an experimental documentation and offline-validation package, independ
 
 The setup prompt describes a supported, approval-gated workflow. This package does not itself create accounts, build Surface, or run a service.
 
+## Try a practical skill
+
+- [Dotsys Skills](../skills/README.md): the Paste Inbox download, use prompt, prerequisites, and limitations. Explicit chat capture is separate from the planned panel/hotkey.
+
 ## Understand or check the protocol
 
 - [Protocol specification](../PROTOCOL.md): the normative Dotsys 0.1.0 contract, document types, and security boundaries.
