@@ -1,13 +1,13 @@
-Corgi Weave
+Dotsys
 A Corgi-Verse project by Hayden Lindley
 
 Copyright (c) 2026 Hayden Lindley, for original material to the extent owned
 or controlled by Hayden Lindley. Third-party material retains its own notices
 and applicable license terms.
 
-Original covered material is available under the Corgi Weave Dots
+Original covered material is available under the Dotsys Dots
 Source-Available License 1.0. See LICENSE.
-SPDX-License-Identifier: LicenseRef-Corgi-Weave-Dots-1.0
+SPDX-License-Identifier: LicenseRef-Dotsys-1.0
 
 This is a custom, platform-restricted source-available license, not an
 OSI-approved open-source license. The LicenseRef identifier is a custom
@@ -18,7 +18,7 @@ under LICENSE. Operational adoption is restricted to OpenAI ChatGPT
 Dots-operated systems and directly supporting OpenAI Codex workflows.
 Permitted systems may be hosted on Vercel, other services, or local computers.
 
-Corgi Weave is independent and is not endorsed, sponsored, or certified by
+Dotsys is independent and is not endorsed, sponsored, or certified by
 OpenAI. OpenAI, ChatGPT, Codex, Vercel, and other third-party names belong to
 their respective owners. Their inclusion grants no trademark rights.
 

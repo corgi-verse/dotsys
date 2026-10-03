@@ -11,7 +11,7 @@ From the package root:
 ```sh
 python -m unittest discover -s tests -v
 python reference/validate.py examples/hello.json --now 2026-10-03T12:00:00Z
-python reference/validate.py examples/weave.json
+python reference/validate.py examples/dotsys.json
 python reference/validate.py directory/directory.json
 ```
 

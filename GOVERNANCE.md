@@ -1,6 +1,6 @@
 # Governance
 
-**Project:** Corgi Weave  
+**Project:** Dotsys  
 **Creator and initial maintainer:** Hayden Lindley / Corgi-Verse  
 **Status:** Experimental 0.1.0  
 **Platform boundary:** OpenAI ChatGPT Dots; separately approved Codex-supported builds  

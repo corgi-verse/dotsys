@@ -6,12 +6,12 @@ code, documentation, fonts, images, dependencies, or other assets.
 
 Third-party material keeps its applicable license, copyright notices, and
 attribution requirements. A dependency's inclusion does not make it subject
-to the Corgi Weave operational restriction. Consult the component's own
+to the Dotsys operational restriction. Consult the component's own
 license for its permissions and obligations.
 
 ## Source and asset inventory
 
-Inventory checked on 2026-10-03 for the initial Corgi Weave package: the HTML,
+Inventory checked on 2026-10-03 for the initial Dotsys package: the HTML,
 CSS, JavaScript, SVG illustrations, protocol documentation, JSON schemas and
 examples, Python reference validator, and tests. These are original project
 files; no vendored upstream implementation, downloaded image, font file,

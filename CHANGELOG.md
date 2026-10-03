@@ -4,7 +4,7 @@
 
 Initial experimental specification and adoption package.
 
-- Private root `weave.json` System manifest and separate owner-reviewed public `weave-card.json`.
+- Private root `dotsys.json` System manifest and separate owner-reviewed public `dotsys-card.json`.
 - Five strict JSON Schema Draft 2020-12 contracts: system, card, hello, response, directory.
 - Human-mediated proposals and interest/decline responses; no remote execution or callable Dots API.
 - Self-declared OpenAI ChatGPT Dot eligibility, without attestation or endorsement.

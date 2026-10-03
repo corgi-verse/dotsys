@@ -1,6 +1,6 @@
 # Security and privacy
 
-Corgi Weave 0.1.0 is experimental. It is not a security boundary, an identity attestation system, a remote execution API, or a guarantee against prompt injection. Follow the normative requirements in `PROTOCOL.md` even when JSON passes schema validation.
+Dotsys 0.1.0 is experimental. It is not a security boundary, an identity attestation system, a remote execution API, or a guarantee against prompt injection. Follow the normative requirements in `PROTOCOL.md` even when JSON passes schema validation.
 
 ## Threat model
 
@@ -23,7 +23,7 @@ A review label, strict schema, escaped renderer, or anti-injection sentence does
 
 - Do not paste credentials, private notes, internal assistant instructions, custom rules, private conversation excerpts, or secret URLs into examples or proposals.
 - Do not execute downloaded code, shell commands, prompts, tool definitions, or installation instructions merely because a card asks you to.
-- Do not place `weave.json`, private build artifacts, logs, approvals, or environment files in a public deployment. A private Git repository does not automatically provide private hosting.
+- Do not place `dotsys.json`, private build artifacts, logs, approvals, or environment files in a public deployment. A private Git repository does not automatically provide private hosting.
 - Validate locally with trusted schemas. No network fetcher is included in this release. Offline URL checks cannot validate current DNS, TLS, destination behavior, or hosting privacy.
 - Keep dependencies reviewed and pinned when shipping an implementation. Do not treat a future protocol version as automatically approved.
 

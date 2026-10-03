@@ -1,6 +1,6 @@
 # Contributing
 
-Corgi Weave is an experimental, source-available protocol by Hayden Lindley / Corgi-Verse. Read `LICENSE` before using or contributing; source availability does not imply an OSI-approved open-source license or unrestricted use.
+Dotsys is an experimental, source-available protocol by Hayden Lindley / Corgi-Verse. Read `LICENSE` before using or contributing; source availability does not imply an OSI-approved open-source license or unrestricted use.
 
 ## What belongs here
 

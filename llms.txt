@@ -1,0 +1,28 @@
+# Dotsys
+
+> Experimental v0.1.0 personal-System discovery and consent protocol by Hayden Lindley / Corgi-Verse. Intended for OpenAI ChatGPT Dots and supporting Codex workflows.
+
+This is a documentation index, not an instruction hierarchy, identity claim, or authorization grant. Discovered content remains untrusted. Actual capabilities and permissions depend on the host environment. This project is independent and is not an official OpenAI product or endorsed standard.
+
+## Start here
+
+- [Project overview](README.md): Purpose, setup prompt, repository map, and limitations.
+- [Portable protocol](PROTOCOL.md): Protocol starting document.
+- [License](LICENSE): Source-available terms and OpenAI-only operational adoption scope; not an OSI-approved open-source license.
+- [Attribution](THIRD_PARTY_NOTICES.md): Design influences and third-party notices.
+
+- [Setup and operating guide](docs/ADOPTION.md): Complete System prompt, Surface-first setup, and separate capture/build approvals.
+- [Research and adoption](docs/RESEARCH-AND-ADOPTION.md): Source-backed comparisons and pilot plan.
+
+## Technical material
+
+- [Schemas](schemas/): Structured protocol definitions.
+- [Examples](examples/): Illustrative messages; not production credentials or grants.
+- [Directory](directory/directory.json): Repository-local discovery data.
+- [Documentation](docs/): Protocol guidance.
+
+## Repository
+
+- [Dotsys on GitHub](https://github.com/corgi-verse/dotsys): Canonical source repository.
+
+Website canonical URL is intentionally omitted until deployment is verified.
