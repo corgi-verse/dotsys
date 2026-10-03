@@ -30,16 +30,19 @@ The [paired handshake walkthrough](docs/PAIRED-HANDSHAKE.md) shows interest, dec
 - Unique local surface names and paths; different hello sender and recipient URLs.
 - Hello expiration, maximum 24-hour duration, and five-minute future-clock allowance.
 - Future timestamp checks for cards and responses as a conservative local screen.
-- Local pair checking: exact hello ID and reversed URLs, response no earlier than hello and strictly before its expiry, with both documents checked at one clock snapshot. The pair checker conservatively rejects timestamps with more than six fractional-second digits to avoid datetime precision truncation; this does not narrow the protocol schemas.
+- All local timestamp parsing, including explicit CLI clocks, conservatively rejects more than six fractional-second digits before datetime conversion, which would otherwise silently truncate them. This is a reference-tool precision limit, not a change to the protocol schemas.
+- Local pair checking: exact hello ID and reversed URLs, response no earlier than hello and strictly before its expiry, with both documents checked at one clock snapshot.
 - Optional comparison against a supplied locally retained terminal response: identical parsed documents are duplicate no-ops; changed responses are rejected. No state is saved.
 
 ## Exact test result
 
-42 unittest methods passed (26 document-validator methods and 16 pair-checker methods). The methods also exercise multiple hostile vectors through subtests. Coverage includes all four example documents, a directory, duplicate keys, size/depth boundaries, encoded data, malformed root/kind, URLs, fake platform attestation, wrong versions, unknown executable fields, time boundaries, duplicate surface labels, and a remotely supplied approval field.
+48 unittest methods passed (29 document-validator methods, 16 pair-checker methods, and three documentation-navigation methods). The methods also exercise multiple hostile vectors through subtests. Coverage includes all four example documents, a directory, duplicate keys, size/depth boundaries, encoded data, malformed root/kind, URLs, fake platform attestation, wrong versions, unknown executable fields, time boundaries, duplicate surface labels, and a remotely supplied approval field. Timestamp regressions cover unsupported precision, supported microsecond future/expiry/lifetime boundaries, and clean CLI rejection.
 
 Pair coverage includes ID and each URL mismatch, equality/expiry/future-clock boundaries, both decisions, duplicates, conflicting decisions and changed messages, invalid previous responses, strict input limits, fractional-second precision rejection, and CLI success/failure output.
 
 The dated hello CLI, private System manifest CLI, empty directory CLI, and dated pair CLI also passed.
+
+Documentation-navigation checks verify the landing page’s link to the GitHub-rendered human guide and separate machine index, local landing-page file and in-page targets, and the guide’s local file and simple heading targets. They do not fetch external URLs or verify hosted Markdown rendering.
 
 ## Explicitly outside scope
 
@@ -50,3 +53,15 @@ No approval engine, trusted consent persistence, durable replay store, owner aut
 Untrusted prose may be structurally valid. One test intentionally preserves malicious-looking prose as data to demonstrate that schema validation is not a prompt-injection detector. An integrating application must keep such content out of authority and execution paths.
 
 This is local parser/schema/semantic validation evidence, not end-to-end protocol or live security conformance.
+
+## Landing-page copy controls
+
+When Node.js is already available, run the separate, dependency-free UI logic checks:
+
+```sh
+node --test tests/test_site_copy.cjs
+```
+
+Seven checks exercise shared-control locking during fetch/clipboard work, repeated and overlapping clicks, manual selection with an accurate field label, setup-prompt restoration, clipboard rejection/insecure-context fallback, recovery from fetch/read failures, and stalled fetch/body deadlines with retry and late-result suppression. They use a small in-memory DOM/clipboard stub and make no network requests. The Python suite above remains independent of Node.js.
+
+These are JavaScript behavior checks, not browser, visual, keyboard, screen-reader, or native clipboard verification. In a browser, check both copy buttons, denied/unavailable clipboard fallback, protocol-load failure, and copying the setup prompt after a protocol fallback. The disabled controls indicate an operation in progress. Protocol loading has a ten-second deadline covering both fetch and body read; a timed-out load cannot later overwrite the clipboard or status. Clipboard writes themselves retain the lock until the browser settles them, because native writes cannot be cancelled safely. File links remain available for manual recovery.

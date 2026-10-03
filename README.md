@@ -120,10 +120,10 @@ This release is documentation, schemas, and examples. It includes **no AI runtim
 To preview the static page from the repository root:
 
 ```sh
-python3 -m http.server 8080
+python3 -m http.server 8080 --bind 127.0.0.1
 ```
 
-Open http://localhost:8080. The page uses relative paths and is suitable for publishing from a GitHub Pages repository root. The repository is [corgi-verse/dotsys](https://github.com/corgi-verse/dotsys). The [public landing page](https://corgi-verse.github.io/dotsys/) is published on GitHub Pages.
+Open http://127.0.0.1:8080 on the same computer. This preview binds only to the local loopback address; stop it with Ctrl+C. Serve only this public package, never your private System repository. The page uses relative paths and is suitable for publishing from a GitHub Pages repository root. The repository is [corgi-verse/dotsys](https://github.com/corgi-verse/dotsys). The [public landing page](https://corgi-verse.github.io/dotsys/) is published on GitHub Pages.
 
 For changes, keep the protocol, schemas, examples, setup prompt, and page claims consistent. Preserve the separation between discovery and authority. Never use a real credential or private personal record as test data. Report reproducible documentation or schema issues through the repository; do not publish security-sensitive material in public issues.
 
