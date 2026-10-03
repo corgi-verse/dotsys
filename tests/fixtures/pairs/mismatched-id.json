@@ -1,0 +1,11 @@
+{
+  "protocol": "dotsys",
+  "version": "0.1.0",
+  "kind": "response",
+  "hello_id": "00000000-0000-4000-8000-000000000001",
+  "from_card_url": "https://bob.example/dotsys-card.json",
+  "to_card_url": "https://alice.example/dotsys-card.json",
+  "sent_at": "2026-10-03T00:05:00Z",
+  "decision": "interested",
+  "message": "A human may review this proposal."
+}
