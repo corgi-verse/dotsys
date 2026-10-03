@@ -1,16 +1,20 @@
 <p align="center"><strong>DOTSYS</strong><br>Experimental v0.1.0 · A discovery and consent protocol</p>
 
-# Your context. Your permission. One clear thread.
+# Your System for Dots.
 
-Dotsys gives personal Systems a shared language for public discovery, human-mediated proposals, and bounded consent. Designed for **OpenAI ChatGPT Dots**, with supporting **Codex** workflows.
+**For Dots users who want to turn ideas into useful projects.** Dotsys gives your work a private personal System: Dots coordinates, Surface keeps progress clear, and Codex handles separately approved builds.
+
+Help shape a community sharing useful ideas, projects, and ways of working with Dots. [Join the community: ideas, questions, and show-and-tell](https://github.com/corgi-verse/dotsys/discussions). The experimental protocol makes optional public introductions possible without exposing the private System.
 
 By **Hayden Lindley / Corgi-Verse**. Independent project; not an official OpenAI product or endorsed standard.
 
-![Separate context strands meet at a user permission checkpoint before a connection continues.](assets/hero.svg)
+![Dotsys branding: an orange corgi, Dotsy’s Protocol by Corgi-verse lettering, and the Dotsys wordmark.](assets/dotsys-brand.png)
 
 ## 1. Why Dotsys exists
 
 Each adopter keeps one private System monorepo. Every new System starts with **Surface**, a private project-status home and bounded operator console at `apps/surface`; other apps and projects can follow. Dots operates and coordinates the System on its cloud computer, while Codex handles separately approved builds. Optional public cards let people discover shared interests without exposing the System. A public description should not silently become a permission grant.
+
+![Context strands meet at a user permission checkpoint.](assets/hero.svg)
 
 Dotsys puts a deliberate boundary between **discovering a capability** and **being authorized to exercise it**. Its aim is a connection a person can understand, approve, limit, and revoke.
 
@@ -81,7 +85,7 @@ RESULTS
 Report verified links, useful artifacts, tests/review results, main’s status, and any remaining blocker. Distinguish scaffolding from working functionality. Offer one concrete next action; don’t create premature task cards or duplicate work.
 ```
 
-The prompt asks Dots to perform supported setup and ongoing coordination within the approvals actually granted. Surface needs a real protected owner view, durable records, verification evidence, and one approved operator read/write loop; a mock dashboard is incomplete. A pasted prompt cannot grant permissions or add missing platform features. The [landing page](index.html) offers the same prompt, a Markdown download, and a full-protocol copy action.
+The prompt asks Dots to perform supported setup and ongoing coordination within the approvals actually granted. Surface needs a real protected owner view, durable records, verification evidence, and one approved operator read/write loop; a mock dashboard is incomplete. A pasted prompt cannot grant permissions or add missing platform features. The [landing page](https://corgi-verse.github.io/dotsys/) offers the same prompt, a Markdown download, and a full-protocol copy action.
 
 ## 4. What is in this repository
 
@@ -98,7 +102,7 @@ The prompt asks Dots to perform supported setup and ongoing coordination within 
 | [LICENSE](LICENSE) | Controlling source-available license |
 | [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) | Attribution and relationship notes |
 
-The landing page and this README use the same original images. No build tool, account, API key, external font, analytics service, or JavaScript framework is needed to serve the page. Copying the full protocol requires serving the files over HTTP(S), rather than opening index.html through a file:// URL.
+The landing page and this README reuse the owner-supplied brand artwork and project-authored explanatory diagrams. See [asset provenance](THIRD_PARTY_NOTICES.md). No build tool, account, API key, external font, analytics service, or JavaScript framework is needed to serve the page. Copying the full protocol requires serving the files over HTTP(S), rather than opening index.html through a file:// URL.
 
 ## 5. Familiar ideas, explicit limits
 
@@ -119,7 +123,7 @@ To preview the static page from the repository root:
 python3 -m http.server 8080
 ```
 
-Open http://localhost:8080. The page uses relative paths and is suitable for publishing from a GitHub Pages repository root. The repository is [corgi-verse/dotsys](https://github.com/corgi-verse/dotsys). Publication and the selected Pages URL must be verified separately; a repository does not imply a deployed website.
+Open http://localhost:8080. The page uses relative paths and is suitable for publishing from a GitHub Pages repository root. The repository is [corgi-verse/dotsys](https://github.com/corgi-verse/dotsys). The [public landing page](https://corgi-verse.github.io/dotsys/) is published on GitHub Pages.
 
 For changes, keep the protocol, schemas, examples, setup prompt, and page claims consistent. Preserve the separation between discovery and authority. Never use a real credential or private personal record as test data. Report reproducible documentation or schema issues through the repository; do not publish security-sensitive material in public issues.
 

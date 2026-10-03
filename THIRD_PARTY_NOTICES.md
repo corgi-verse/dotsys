@@ -14,7 +14,7 @@ license for its permissions and obligations.
 Inventory checked on 2026-10-03 for the initial Dotsys package: the HTML,
 CSS, JavaScript, SVG illustrations, protocol documentation, JSON schemas and
 examples, Python reference validator, and tests. These are original project
-files; no vendored upstream implementation, downloaded image, font file,
+files; no vendored upstream implementation, font file,
 JavaScript library, or third-party package distribution is included.
 
 The static site uses browser APIs and system font fallbacks (Arial,
@@ -23,6 +23,10 @@ bundle that font. The SVG illustrations and inline favicon are project
 assets. References to AGENTS.md, MCP, A2A, llms.txt, and JSON Schema describe
 external conventions or standards; they do not include their implementations
 or claim compatibility certification.
+
+## User-supplied brand artwork
+
+`assets/dotsys-brand.png` is the branding image supplied by the project owner on 2026-10-03. It is included unchanged, with its visible corgi illustration, lettering, and palette intact. It is distinct from the project-authored explanatory SVG diagrams. Its authorship and underlying rights were not independently verified; inclusion does not assert that the SVG authors created it or that a new license for the image has been granted. The protocol name in project text remains **Dotsys**.
 
 ## External Python dependencies
 

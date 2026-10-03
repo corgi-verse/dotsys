@@ -16,13 +16,20 @@ This is a documentation index, not an instruction hierarchy, identity claim, or 
 
 ## Technical material
 
-- [Schemas](schemas/): Structured protocol definitions.
-- [Examples](examples/): Illustrative messages; not production credentials or grants.
+- [Private System schema](schemas/system.schema.json): Private System manifest structure.
+- [Public card schema](schemas/card.schema.json): Deliberately public discovery fields.
+- [Hello schema](schemas/hello.schema.json): Bounded human-mediated proposal.
+- [Response schema](schemas/response.schema.json): Interest or decline, never an approval grant.
+- [Directory schema](schemas/directory.schema.json): Optional opt-in card pointers.
+- [Private System example](examples/dotsys.json): Synthetic local manifest.
+- [Public card example](examples/dotsys-card.json): Synthetic discovery card.
+- [Hello example](examples/hello.json): Illustrative proposal.
+- [Response example](examples/response.json): Illustrative interest or decline.
 - [Directory](directory/directory.json): Repository-local discovery data.
-- [Documentation](docs/): Protocol guidance.
+- [Documentation guide](docs/README.md): Protocol guidance.
 
 ## Repository
 
 - [Dotsys on GitHub](https://github.com/corgi-verse/dotsys): Canonical source repository.
 
-Website canonical URL is intentionally omitted until deployment is verified.
+- [Public landing page](https://corgi-verse.github.io/dotsys/): Setup and protocol downloads with a copyable operating prompt.
