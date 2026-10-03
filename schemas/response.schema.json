@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dotsys response 0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "protocol": {
+      "const": "dotsys"
+    },
+    "version": {
+      "const": "0.1.0"
+    },
+    "kind": {
+      "const": "response"
+    },
+    "hello_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "from_card_url": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "format": "uri",
+      "pattern": "^https://[^/?#@\\s]+(?:/[^?#\\s]*)?$"
+    },
+    "to_card_url": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "format": "uri",
+      "pattern": "^https://[^/?#@\\s]+(?:/[^?#\\s]*)?$"
+    },
+    "sent_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "decision": {
+      "enum": [
+        "interested",
+        "declined"
+      ]
+    },
+    "message": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 500
+    }
+  },
+  "required": [
+    "protocol",
+    "version",
+    "kind",
+    "hello_id",
+    "from_card_url",
+    "to_card_url",
+    "sent_at",
+    "decision",
+    "message"
+  ]
+}

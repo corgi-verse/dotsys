@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dotsys hello 0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "protocol": {
+      "const": "dotsys"
+    },
+    "version": {
+      "const": "0.1.0"
+    },
+    "kind": {
+      "const": "hello"
+    },
+    "hello_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "from_card_url": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "format": "uri",
+      "pattern": "^https://[^/?#@\\s]+(?:/[^?#\\s]*)?$"
+    },
+    "to_card_url": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "format": "uri",
+      "pattern": "^https://[^/?#@\\s]+(?:/[^?#\\s]*)?$"
+    },
+    "sent_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "topic": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "proposed_shared_data": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 120
+      },
+      "maxItems": 12,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "protocol",
+    "version",
+    "kind",
+    "hello_id",
+    "from_card_url",
+    "to_card_url",
+    "sent_at",
+    "expires_at",
+    "topic",
+    "purpose",
+    "proposed_shared_data"
+  ]
+}

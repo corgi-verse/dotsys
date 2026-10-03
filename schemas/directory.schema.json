@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dotsys directory 0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "protocol": {
+      "const": "dotsys"
+    },
+    "version": {
+      "const": "0.1.0"
+    },
+    "kind": {
+      "const": "directory"
+    },
+    "card_urls": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2048,
+        "format": "uri",
+        "pattern": "^https://[^/?#@\\s]+(?:/[^?#\\s]*)?$"
+      },
+      "maxItems": 1000,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "protocol",
+    "version",
+    "kind",
+    "card_urls"
+  ]
+}

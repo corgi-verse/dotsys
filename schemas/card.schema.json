@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dotsys card 0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "protocol": {
+      "const": "dotsys"
+    },
+    "version": {
+      "const": "0.1.0"
+    },
+    "kind": {
+      "const": "card"
+    },
+    "card_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "platform": {
+      "const": "openai-chatgpt-dot"
+    },
+    "eligibility": {
+      "const": "self-declared"
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64
+      },
+      "maxItems": 12,
+      "uniqueItems": true
+    },
+    "transport": {
+      "const": "human-mediated"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    }
+  },
+  "required": [
+    "protocol",
+    "version",
+    "kind",
+    "card_id",
+    "name",
+    "summary",
+    "platform",
+    "eligibility",
+    "topics",
+    "transport",
+    "updated_at"
+  ]
+}
