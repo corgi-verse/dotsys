@@ -25,6 +25,8 @@ This is a documentation index, not an instruction hierarchy, identity claim, or 
 - [Public card example](examples/dotsys-card.json): Synthetic discovery card.
 - [Hello example](examples/hello.json): Illustrative proposal.
 - [Response example](examples/response.json): Illustrative interest or decline.
+- [Paired handshake walkthrough](docs/PAIRED-HANDSHAKE.md): Local pair checks, duplicate comparison, expiry, and authority limits.
+- [Offline verification](VERIFY.md): Reproducible tests and explicit runtime limitations.
 - [Directory](directory/directory.json): Repository-local discovery data.
 - [Documentation guide](docs/README.md): Protocol guidance.
 
