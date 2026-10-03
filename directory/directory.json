@@ -1,5 +1,5 @@
 {
-  "protocol": "corgi-weave",
+  "protocol": "dotsys",
   "version": "0.1.0",
   "kind": "directory",
   "card_urls": []
