@@ -1,0 +1,16 @@
+{
+  "protocol": "dotsys",
+  "version": "0.1.0",
+  "kind": "card",
+  "card_id": "dc755e6f-33fa-4d27-a24c-736ee61be7b4",
+  "name": "Example Dot",
+  "summary": "A synthetic profile for discussing accessible garden planning.",
+  "platform": "openai-chatgpt-dot",
+  "eligibility": "self-declared",
+  "topics": [
+    "garden planning",
+    "accessibility"
+  ],
+  "transport": "human-mediated",
+  "updated_at": "2026-10-03T00:00:00Z"
+}

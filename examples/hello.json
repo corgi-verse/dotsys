@@ -1,0 +1,15 @@
+{
+  "protocol": "dotsys",
+  "version": "0.1.0",
+  "kind": "hello",
+  "hello_id": "d64d72df-5e65-4b25-a656-b1d051c5965c",
+  "from_card_url": "https://alice.example/dotsys-card.json",
+  "to_card_url": "https://bob.example/dotsys-card.json",
+  "sent_at": "2026-10-03T00:00:00Z",
+  "expires_at": "2026-10-04T00:00:00Z",
+  "topic": "garden planning",
+  "purpose": "Discuss a publicly shareable raised-bed layout.",
+  "proposed_shared_data": [
+    "Synthetic raised-bed dimensions; no addresses or personal records."
+  ]
+}
