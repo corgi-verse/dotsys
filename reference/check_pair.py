@@ -4,28 +4,15 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 from pathlib import Path
-import re
 
 if __package__:
-    from .validate import InvalidDocument, MAX_BYTES, _instant, parse_document, validate_document
+    from .validate import InvalidDocument, MAX_BYTES, _instant, validate_document
 else:
-    from validate import InvalidDocument, MAX_BYTES, _instant, parse_document, validate_document
-
-
-def _pair_document(raw, now):
-    # datetime truncates finer fractions. Reject them before temporal checks,
-    # rather than silently accepting a pre-hello response or >24-hour lifetime.
-    parsed = parse_document(raw)
-    if isinstance(parsed, dict):
-        for field in ('sent_at', 'expires_at'):
-            value = parsed.get(field)
-            if isinstance(value, str) and re.search(r'\.\d{7}', value):
-                raise InvalidDocument('pair timestamps support at most six fractional digits')
-    return validate_document(raw, now)
+    from validate import InvalidDocument, MAX_BYTES, _instant, validate_document
 
 
 def _response_for(hello, raw, now):
-    response = _pair_document(raw, now)
+    response = validate_document(raw, now)
     if response['kind'] != 'response':
         raise InvalidDocument('expected a response document')
     if response['hello_id'] != hello['hello_id']:
@@ -58,7 +45,7 @@ def check_pair(hello_raw: bytes, response_raw: bytes, *,
         inputs.append(previous_response_raw)
     if any(len(raw) > MAX_BYTES for raw in inputs):
         raise InvalidDocument('pair input exceeds 65536 bytes')
-    hello = _pair_document(hello_raw, now)
+    hello = validate_document(hello_raw, now)
     if hello['kind'] != 'hello':
         raise InvalidDocument('expected a retained hello document')
     response = _response_for(hello, response_raw, now)

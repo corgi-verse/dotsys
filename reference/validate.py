@@ -118,6 +118,10 @@ def check_public_url(value: str):
 
 
 def _instant(value):
+    # datetime silently truncates finer fractions. Fail closed before any
+    # timestamp comparison; this local precision limit does not change schemas.
+    if isinstance(value, str) and re.search(r'[.,]\d{7}', value):
+        raise InvalidDocument('local timestamps support at most six fractional digits')
     try:
         result = datetime.fromisoformat(value.replace('Z', '+00:00'))
     except (ValueError, TypeError) as exc:
