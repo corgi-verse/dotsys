@@ -1,4 +1,4 @@
-"""Local Corgi Weave document checks. No network, authority, or execution."""
+"""Local Dotsys document checks. No network, authority, or execution."""
 from __future__ import annotations
 
 import argparse
