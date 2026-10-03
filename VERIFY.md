@@ -50,3 +50,15 @@ No approval engine, trusted consent persistence, durable replay store, owner aut
 Untrusted prose may be structurally valid. One test intentionally preserves malicious-looking prose as data to demonstrate that schema validation is not a prompt-injection detector. An integrating application must keep such content out of authority and execution paths.
 
 This is local parser/schema/semantic validation evidence, not end-to-end protocol or live security conformance.
+
+## Landing-page copy controls
+
+When Node.js is already available, run the separate, dependency-free UI logic checks:
+
+```sh
+node --test tests/test_site_copy.cjs
+```
+
+Seven checks exercise shared-control locking during fetch/clipboard work, repeated and overlapping clicks, manual selection with an accurate field label, setup-prompt restoration, clipboard rejection/insecure-context fallback, recovery from fetch/read failures, and stalled fetch/body deadlines with retry and late-result suppression. They use a small in-memory DOM/clipboard stub and make no network requests. The Python suite above remains independent of Node.js.
+
+These are JavaScript behavior checks, not browser, visual, keyboard, screen-reader, or native clipboard verification. In a browser, check both copy buttons, denied/unavailable clipboard fallback, protocol-load failure, and copying the setup prompt after a protocol fallback. The disabled controls indicate an operation in progress. Protocol loading has a ten-second deadline covering both fetch and body read; a timed-out load cannot later overwrite the clipboard or status. Clipboard writes themselves retain the lock until the browser settles them, because native writes cannot be cancelled safely. File links remain available for manual recovery.
