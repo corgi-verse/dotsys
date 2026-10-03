@@ -1,5 +1,5 @@
 {
-  "protocol": "corgi-weave",
+  "protocol": "dotsys",
   "version": "0.1.0",
   "kind": "system",
   "system_id": "23fd5b73-a216-4e43-8e12-8b118fc42d13",
