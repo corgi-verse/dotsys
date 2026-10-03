@@ -3,6 +3,9 @@ from datetime import datetime, timezone
 import importlib.util
 import json
 from pathlib import Path
+import subprocess
+import sys
+import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -77,6 +80,72 @@ class ValidatorTests(unittest.TestCase):
         doc['sent_at'] = '2026-10-03T12:05:01Z'
         with self.assertRaises(v.InvalidDocument):
             self.validate(doc)
+
+    def test_fractional_precision_fails_closed(self):
+        for name, field, timestamp in (
+            ('hello.json', 'expires_at', '2026-10-04T00:00:00.0000001Z'),
+            ('hello.json', 'sent_at', '2026-10-03T12:05:00.0000001Z'),
+            ('dotsys-card.json', 'updated_at', '2026-10-03T12:05:00.0000001Z'),
+            ('response.json', 'sent_at', '2026-10-03T12:05:00.0000001Z'),
+            ('hello.json', 'sent_at', '2026-10-03T00:00:00.0000000Z'),
+        ):
+            doc = self.example(name)
+            doc[field] = timestamp
+            with self.subTest(name=name, field=field, timestamp=timestamp):
+                with self.assertRaisesRegex(v.InvalidDocument, 'six fractional'):
+                    self.validate(doc)
+
+    def test_microsecond_boundaries_remain_supported(self):
+        for name, field in (('hello.json', 'sent_at'),
+                            ('dotsys-card.json', 'updated_at'),
+                            ('response.json', 'sent_at')):
+            doc = self.example(name)
+            doc[field] = '2026-10-03T12:05:00.000000Z'
+            with self.subTest(name=name):
+                self.validate(doc)
+                doc[field] = '2026-10-03T12:05:00.000001Z'
+                with self.assertRaisesRegex(v.InvalidDocument, 'future'):
+                    self.validate(doc)
+        doc = self.example()
+        doc['expires_at'] = '2026-10-04T00:00:00.000000Z'
+        self.validate(doc)
+        doc['expires_at'] = '2026-10-04T00:00:00.000001Z'
+        with self.assertRaisesRegex(v.InvalidDocument, '24 hours'):
+            self.validate(doc)
+        doc['expires_at'] = '2026-10-03T12:00:00.000001Z'
+        self.validate(doc)
+        doc['expires_at'] = '2026-10-03T12:00:00.000000Z'
+        with self.assertRaisesRegex(v.InvalidDocument, 'expired'):
+            self.validate(doc)
+
+    def test_cli_rejects_unsupported_timestamp_precision(self):
+        doc = self.example()
+        doc['expires_at'] = '2026-10-04T00:00:00.0000001Z'
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'hello.json'
+            commands = (
+                [sys.executable, 'reference/validate.py', str(path), '--now'],
+                [sys.executable, 'reference/check_pair.py', str(path),
+                 'examples/response.json', '--now'],
+            )
+            cases = [(doc, '2026-10-03T12:00:00Z')]
+            cases.extend((self.example(), clock) for clock in (
+                '2026-10-03T12:00:00.0000001Z',
+                '2026-10-03T12:00:00,0000001Z',
+                '2026-10-03T12:00:00+00:00:01.0000001',
+                '2026-10-03T12:00:00+00:00:01,0000001',
+            ))
+            for command in commands:
+                for input_doc, clock in cases:
+                    path.write_text(json.dumps(input_doc))
+                    result = subprocess.run(command + [clock], cwd=ROOT,
+                                            capture_output=True, text=True)
+                    with self.subTest(command=command[1], clock=clock):
+                        self.assertEqual(result.returncode, 1)
+                        self.assertTrue(result.stderr.startswith('INVALID'))
+                        self.assertIn('six fractional', result.stderr)
+                        self.assertNotIn('Traceback', result.stderr)
+                        self.assertEqual(result.stdout, '')
 
     def test_non_directory_byte_limit(self):
         raw = json.dumps(self.example()).encode() + b' ' * v.MAX_BYTES
