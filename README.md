@@ -87,12 +87,18 @@ Report verified links, useful artifacts, tests/review results, main’s status, 
 
 The prompt asks Dots to perform supported setup and ongoing coordination within the approvals actually granted. Surface needs a real protected owner view, durable records, verification evidence, and one approved operator read/write loop; a mock dashboard is incomplete. A pasted prompt cannot grant permissions or add missing platform features. The [landing page](https://corgi-verse.github.io/dotsys/) offers the same prompt, a Markdown download, and a full-protocol copy action.
 
+## Try a practical skill
+
+[Paste Inbox](skills/README.md) saves text you explicitly submit through chat into a private folder on your Dot’s cloud computer. Download the inspectable skill package and use the supported flow for your host. Installation is host-dependent; the quick panel and hotkey are planned, not shipped. No Dropbox account or background clipboard watching is involved.
+
 ## 4. What is in this repository
 
 | File or directory | Purpose |
 | --- | --- |
 | [PROTOCOL.md](PROTOCOL.md) | Portable starting document and protocol instructions |
 | [docs/](docs/) | Protocol design and operating guidance |
+| [skills/](skills/README.md) | Optional reusable workflows and local helpers |
+| [downloads/paste-inbox.zip](downloads/paste-inbox.zip) | Self-contained Paste Inbox skill package |
 | [schemas/](schemas/) | Machine-readable structures for discovery and exchange |
 | [examples/](examples/) | Illustrative protocol messages and System descriptions |
 | [directory/](directory/) | A repository-local discovery directory |
@@ -113,7 +119,7 @@ The landing page and this README reuse the owner-supplied brand artwork and proj
 
 These are design influences, not claims that this repository implements MCP or A2A, or that any platform automatically discovers or honors Dotsys files. See the [research and adoption plan](docs/RESEARCH-AND-ADOPTION.md) for source-backed comparisons, discoverability choices, and a measured pilot.
 
-This release is documentation, schemas, and examples. It includes **no AI runtime, hosted backend, account connector, identity provider, credential store, or autonomous execution service**. Treat every example as illustrative. Do not place private personal context, secrets, or authorization grants in a public card or directory. The optional directory starts empty; examples are synthetic and do not represent live peers.
+This release includes documentation, schemas, examples, offline protocol checks, and an optional Paste Inbox skill with a local file helper. It includes **no AI runtime, hosted backend, account connector, identity provider, credential store, or autonomous execution service**. Treat every example as illustrative. Do not place private personal context, secrets, or authorization grants in a public card or directory. The optional directory starts empty; examples are synthetic and do not represent live peers.
 
 ## 6. Run, inspect, and contribute
 

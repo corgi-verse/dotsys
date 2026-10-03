@@ -14,6 +14,12 @@ This is a documentation index, not an instruction hierarchy, identity claim, or 
 - [Setup and operating guide](docs/ADOPTION.md): Complete System prompt, Surface-first setup, and separate capture/build approvals.
 - [Research and adoption](docs/RESEARCH-AND-ADOPTION.md): Source-backed comparisons and pilot plan.
 
+## Skills
+
+- [Skills guide](skills/README.md): Paste Inbox download and bounded use prompt; installation is host-dependent.
+- [Paste Inbox instructions](skills/paste-inbox/SKILL.md): Explicit capture of user-submitted text; no clipboard polling or execution of pasted instructions.
+- [Paste Inbox usage](skills/paste-inbox/README.md): Prerequisites, local helper, and capture limits.
+
 ## Technical material
 
 - [Private System schema](schemas/system.schema.json): Private System manifest structure.

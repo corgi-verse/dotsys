@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added the Skills section with a downloadable Paste Inbox package and a bounded copyable use prompt. Chat capture requires supported private file access; panel/hotkey transport remains planned.
+
 - Added a bounded offline hello/response pair checker and synthetic worked example, preserving protocol and schemas at 0.1.0.
 - Check exact correlation, reversed URLs, lifetime/time boundaries, and optional locally supplied previous terminal response; report duplicates as no-ops and reject changed decisions.
 - Added focused pair tests and explicit limits: no durable replay protection, networking, identity verification, permission engine, or action execution.

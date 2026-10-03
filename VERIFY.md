@@ -65,3 +65,16 @@ node --test tests/test_site_copy.cjs
 Seven checks exercise shared-control locking during fetch/clipboard work, repeated and overlapping clicks, manual selection with an accurate field label, setup-prompt restoration, clipboard rejection/insecure-context fallback, recovery from fetch/read failures, and stalled fetch/body deadlines with retry and late-result suppression. They use a small in-memory DOM/clipboard stub and make no network requests. The Python suite above remains independent of Node.js.
 
 These are JavaScript behavior checks, not browser, visual, keyboard, screen-reader, or native clipboard verification. In a browser, check both copy buttons, denied/unavailable clipboard fallback, protocol-load failure, and copying the setup prompt after a protocol fallback. The disabled controls indicate an operation in progress. Protocol loading has a ten-second deadline covering both fetch and body read; a timed-out load cannot later overwrite the clipboard or status. Clipboard writes themselves retain the lock until the browser settles them, because native writes cannot be cancelled safely. File links remain available for manual recovery.
+
+
+## Skills section checks
+
+Run the landing-page copy checks with Node’s built-in runner:
+
+```sh
+node --test tests/test_site_copy.cjs tests/test_skill_copy.cjs
+```
+
+The Skills checks verify literal prompt copying, manual selection fallback when clipboard access is unavailable, repeat-click locking, and truthful installation wording. Python documentation checks cover local links, matching use prompts, unchanged setup-prompt consistency, and ZIP/source agreement. Run the Paste Inbox package’s own tests using its [usage guide](skills/paste-inbox/README.md).
+
+These offline checks do not verify skill import in any host, durable storage across execution environments, or a device-to-Dot paste panel/hotkey connection. Before release, inspect the published section on desktop and narrow screens and verify the ZIP download and copy action in a real browser.
