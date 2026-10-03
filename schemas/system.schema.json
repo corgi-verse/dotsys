@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dotsys system 0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "protocol": {
+      "const": "dotsys"
+    },
+    "version": {
+      "const": "0.1.0"
+    },
+    "kind": {
+      "const": "system"
+    },
+    "system_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "visibility": {
+      "const": "private"
+    },
+    "platform": {
+      "const": "openai-chatgpt-dot"
+    },
+    "surfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^apps/[a-z0-9][a-z0-9-]{0,62}(?![\\s\\S])"
+          }
+        },
+        "required": [
+          "name",
+          "path"
+        ]
+      },
+      "maxItems": 32,
+      "uniqueItems": true
+    },
+    "public_card_url": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "format": "uri",
+      "pattern": "^https://[^/?#@\\s]+(?:/[^?#\\s]*)?$"
+    }
+  },
+  "required": [
+    "protocol",
+    "version",
+    "kind",
+    "system_id",
+    "name",
+    "visibility",
+    "platform",
+    "surfaces"
+  ]
+}
