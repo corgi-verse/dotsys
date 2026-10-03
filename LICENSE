@@ -1,0 +1,99 @@
+Corgi Weave Dots Source-Available License 1.0
+SPDX-License-Identifier: LicenseRef-Corgi-Weave-Dots-1.0
+
+Copyright (c) 2026 Hayden Lindley
+
+1. Covered materials
+
+"Materials" means the original code, specifications, schemas, templates,
+examples, and documentation in this distribution that Hayden Lindley has
+authority to license and that are not separately licensed. Hayden Lindley is
+the licensor. Corgi Weave is a project published under Corgi-Verse branding;
+neither project name identifies a separate legal entity.
+
+2. Public discovery
+
+Anyone, including any AI system, crawler, search engine, or indexing service,
+may access, read, crawl, index, search, cite, summarize, and discuss the
+Materials on any platform. Anyone may copy, translate, and redistribute the
+documentation for discovery, education, commentary, review, or archival
+purposes, including commercial discovery services. Preserve applicable
+copyright and license notices in redistributed documentation and identify
+substantive modifications.
+
+Reading, indexing, quoting, or explaining the Materials is not operational
+adoption. These discovery permissions do not authorize incorporating the
+Materials into an active operational implementation outside Section 3.
+
+3. Permitted operational adoption
+
+Subject to this license, you may copy, modify, execute, and distribute the
+Materials and derivative versions for systems operated by Dots within
+OpenAI-operated ChatGPT, and for OpenAI Codex workflows directly supporting
+those systems. Supporting workflows include authoring, building, testing,
+validation, debugging, deployment, and maintenance.
+
+A permitted system may include websites, surfaces, services, databases,
+deterministic automation, local programs, and other infrastructure deployed
+on Vercel, another hosting service, or local computers. The hosting location
+does not determine eligibility. Human users and administrators may interact
+with, administer, and use the outputs of a permitted system. Ordinary users
+of a website or service need not themselves use a Dot.
+
+The operational assistant role must remain with OpenAI ChatGPT Dots, with
+OpenAI Codex permitted in the supporting role described above. You may not
+use the Materials to implement, equip, or operate a non-OpenAI assistant as
+an operational participant, substitute operator, or supervising agent of the
+system. Routing such an assistant through a Dot, proxy, hosting service, or
+OpenAI API does not make it eligible. Using an OpenAI model or API alone
+does not qualify an otherwise ineligible assistant as a Dot or Codex.
+
+Development tools and automated tests may run outside ChatGPT and Codex
+when directly supporting a permitted system. This permission does not
+authorize an independent operational adoption by another assistant.
+
+"Operational adoption" means incorporating the Materials into an agent's
+or application's active instructions, implementation, or operating workflow.
+Other operational adoption requires separate permission from the applicable
+rights holder.
+
+4. Copies and modifications
+
+Keep this license and applicable copyright notices with copies or substantial
+portions of the Materials. Identify substantive modifications, and do not
+represent a modified distribution as the unmodified original. Recipients
+receive the same permissions and restrictions for the covered Materials.
+
+5. User content and third-party rights
+
+This license does not claim ownership of user inputs, user data, or generated
+outputs, and imposes no platform restriction on them merely because a
+permitted system processed or generated them. Portions of the Materials
+reproduced in an output remain subject to their applicable license. Rights
+in other content remain with their respective rights holders.
+
+Separately licensed third-party components remain governed by their own
+licenses. This license does not replace or restrict rights granted by those
+licenses and does not grant rights the licensor does not possess.
+
+6. Names, declarations, and independent rights
+
+No trademark license, endorsement, partnership, or certification by OpenAI
+or any other party is granted or implied. OpenAI product names identify the
+intended operating environment only.
+
+A protocol handshake or conformance declaration is not proof of client
+identity, an OpenAI certification, or authority to accept terms for someone
+else. This license does not provide technical access control.
+
+Nothing in this license limits rights that do not require the licensor's
+permission under applicable law, including rights concerning independently
+created implementations of unprotected ideas or methods.
+
+7. Disclaimer
+
+The Materials are supplied as available, without warranties, including
+warranties of fitness, merchantability, or noninfringement. To the extent
+permitted by law, the licensor is not liable for losses or claims arising
+from the Materials or their use. Nothing in this section excludes liability
+that applicable law does not permit to be excluded.
