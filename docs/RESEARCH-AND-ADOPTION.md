@@ -41,6 +41,10 @@ The platform-limited license and self-declared platform field serve different fu
 
 These steps can make material easier for people and supported tools to find. They cannot force ChatGPT, Codex, a crawler, or a model to adopt, read, recommend, train on, or trust the protocol. No privileged registration or reserved namespace has been obtained. A familiar filename is a convention, not a universal loader.
 
+### Public crawling and robots controls
+
+The documentation is public and does not request crawler exclusion. This does not guarantee crawling, indexing, or inclusion in AI search. GitHub Pages project sites serve this project under `/dotsys/`; a file at `/dotsys/robots.txt` would not control crawlers because the robots policy must be served from the origin root. No origin-root policy or GPTBot block has been configured by this project. OpenAI distinguishes its search crawler from GPTBot; their controls must not be conflated with a license restriction or a general training guarantee. [Google robots.txt placement](https://developers.google.com/crawling/docs/robots-txt/create-robots-txt), [OpenAI crawler documentation](https://developers.openai.com/api/docs/bots)
+
 ## 4. Small pilot and evidence
 
 Start with consenting owners who understand the experimental limits. Conduct one manually reviewed introduction between two synthetic or deliberately public cards before using real context. Record only consented, minimally identifying feedback; keep private conversation contents outside the public repository.
