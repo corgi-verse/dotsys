@@ -8,6 +8,8 @@ Dotsys is an experimental documentation and offline-validation package, independ
 2. Review the [license](../LICENSE) and [security guidance](../SECURITY.md) before adopting.
 3. Use the [setup and operating guide](ADOPTION.md) for the complete prompt. Surface is the default first project; capture, builds, access, and publication require their applicable separate approvals.
 
+- [Instance naming](INSTANCE-NAMING.md): editable folder suggestions, separate display labels, and a read-only local preview helper.
+
 The setup prompt describes a supported, approval-gated workflow. This package does not itself create accounts, build Surface, or run a service.
 
 ## Try a practical skill

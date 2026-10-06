@@ -36,7 +36,7 @@ The [paired handshake walkthrough](docs/PAIRED-HANDSHAKE.md) shows interest, dec
 
 ## Exact test result
 
-48 unittest methods passed (29 document-validator methods, 16 pair-checker methods, and three documentation-navigation methods). The methods also exercise multiple hostile vectors through subtests. Coverage includes all four example documents, a directory, duplicate keys, size/depth boundaries, encoded data, malformed root/kind, URLs, fake platform attestation, wrong versions, unknown executable fields, time boundaries, duplicate surface labels, and a remotely supplied approval field. Timestamp regressions cover unsupported precision, supported microsecond future/expiry/lifetime boundaries, and clean CLI rejection.
+63 unittest methods passed (29 document-validator methods, 16 pair-checker methods, three documentation-navigation methods, three Skills/setup consistency methods, and 12 instance-naming methods). The methods also exercise multiple hostile vectors through subtests. Coverage includes all four example documents, a directory, duplicate keys, size/depth boundaries, encoded data, malformed root/kind, URLs, fake platform attestation, wrong versions, unknown executable fields, time boundaries, duplicate surface labels, and a remotely supplied approval field. Timestamp regressions cover unsupported precision, supported microsecond future/expiry/lifetime boundaries, and clean CLI rejection.
 
 Pair coverage includes ID and each URL mismatch, equality/expiry/future-clock boundaries, both decisions, duplicates, conflicting decisions and changed messages, invalid previous responses, strict input limits, fractional-second precision rejection, and CLI success/failure output.
 
@@ -78,3 +78,16 @@ node --test tests/test_site_copy.cjs tests/test_skill_copy.cjs
 The Skills checks verify literal prompt copying, manual selection fallback when clipboard access is unavailable, repeat-click locking, and truthful installation wording. Python documentation checks cover local links, matching use prompts, unchanged setup-prompt consistency, and ZIP/source agreement. Run the Paste Inbox package’s own tests using its [usage guide](skills/paste-inbox/README.md).
 
 These offline checks do not verify skill import in any host, durable storage across execution environments, or a device-to-Dot paste panel/hotkey connection. Before release, inspect the published section on desktop and narrow screens and verify the ZIP download and copy action in a real browser.
+
+
+## Instance-naming checks
+
+Run the focused, offline naming checks:
+
+```sh
+python -m unittest discover -s tests -p 'test_plan_name.py' -v
+```
+
+All 12 naming tests pass. Coverage includes shared prefix/component examples, Unicode-to-ASCII suggestion normalization, empty/unrepresentable handles, length boundaries, traversal and separator rejection, reserved device names, case-insensitive file/directory/dangling-symlink collisions, bounded collision suffixes, independent display/folder edits, clean CLI errors, no file writes, and unchanged example manifests, identifiers, version, and surface paths. The full 63-test Python suite and all 11 Node copy-control tests also pass; the three setup-prompt copies are identical after HTML decoding.
+
+The helper only previews a name at one existing local destination. It does not reserve or create a directory, check hosted-provider availability, prove global uniqueness, provision a repository, rename an installation, or establish a network identity. Future creation code must handle races and symlink boundaries independently. No browser or deployed installer behavior was tested or added by this change.

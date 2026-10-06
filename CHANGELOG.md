@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added an editable `dotsys-<handle>-<component>` folder/repository naming offer, separate friendly labels, and privacy-preserving handle choices in all three setup-prompt copies.
+- Added a read-only local naming helper with portable slug checks and destination collision suggestions. Existing paths, private/public IDs, and all 0.1.0 schemas remain unchanged; no installer or network identity service is implied.
+
 - Added the Skills section with a downloadable Paste Inbox package and a bounded copyable use prompt. Chat capture requires supported private file access; panel/hotkey transport remains planned.
 
 - Added a bounded offline hello/response pair checker and synthetic worked example, preserving protocol and schemas at 0.1.0.
