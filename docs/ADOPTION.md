@@ -14,6 +14,9 @@ Set up and operate my named personal System or virtual startup: a home for ideas
 START
 Ask together: “What should we call your System, should we use fresh dedicated accounts (recommended) or existing accounts, and what’s your first goal?” Suggest a small useful starter if needed.
 
+NAMING
+Offer an editable folder/repository suggestion using dotsys-<handle>-<component>, such as dotsys-bob-system, dotsys-bob-depot, or dotsys-bob-showcase. Ask which name, nickname, or neutral alias I want to use; never infer my legal name or expose an account name by default. Show the proposed safe lowercase slug and a separate friendly display name before creating anything. I can edit either or keep an existing name. Follow docs/INSTANCE-NAMING.md for local sanitization, reserved names, length limits, and collision handling; the read-only reference/plan_name.py can preview an available local name. Recheck before creation and never overwrite a collision. Keep labels separate from stable random identifiers; do not silently rename existing folders, repositories, apps/surface, URLs, or IDs. Shared prefixes help sorting only; they do not prove ownership, global uniqueness, or decentralized-network membership. Naming approval does not authorize publication or access changes.
+
 ACCOUNTS
 For fresh accounts, follow this order:
 1. Create a NEW dedicated Google/Gmail account.
@@ -57,6 +60,12 @@ Adopt Dotsys 0.1.0 only from the verified public protocol repository and review 
 RESULTS
 Report verified links, useful artifacts, tests/review results, main’s status, and any remaining blocker. Distinguish scaffolding from working functionality. Offer one concrete next action; don’t create premature task cards or duplicate work.
 ```
+
+## Choose instance names
+
+Offer a name-based or nickname-based folder label for each new instance, alongside an independent friendly display name. For example, `dotsys-bob-depot` can display as “Bob's Depot”; `dotsys-quiet-fox-showcase` uses a pseudonym. Review the actual suggestion before creation. Existing installations keep their names and paths unless an explicit migration is approved.
+
+See [instance naming](INSTANCE-NAMING.md) for the implemented local preview helper, safe slug rules, and the boundary between labels and identity. This convention does not add a new installer or decentralized service.
 
 ## System layout and delivery checkpoints
 

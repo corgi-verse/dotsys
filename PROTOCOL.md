@@ -39,6 +39,14 @@ Every document fixes `protocol` to `dotsys` and `version` to `0.1.0`. There is n
 
 `public_card_url` is optional and MUST be absent until that exact card publication is separately approved. Merely setting the field does not publish or enroll anything. This file MUST NOT contain tokens, owner email, source conversation excerpts, approvals, internal notes, or public credentials. A hosting deployment MUST explicitly exclude the file and other private repository content.
 
+### 2.1.1 Local instance naming
+
+New setup workflows SHOULD offer an editable folder or repository label in the form `dotsys-<handle>-<component>`, using a deliberately chosen name, nickname, or neutral alias. Examples include `dotsys-hayden-depot`, `dotsys-bob-depot`, `dotsys-hayden-showcase`, and `dotsys-bob-showcase`. They MUST NOT infer a legal name or copy an account identity into a visible label without the owner's choice. A friendly display name MAY differ from the folder label; the existing private manifest `name` field remains the System's display label.
+
+Folder suggestions MUST be safe single path segments, checked for reserved names, bounded length, and collisions at the actual local destination. Show normalization or collision-adjusted suggestions for review before creation. Never overwrite a collision or silently rename an existing folder, repository, URL, or identifier. Existing labels and the default `apps/surface` layout remain valid; this convention introduces no new required fields or schema constraints in 0.1.0. See [instance naming](docs/INSTANCE-NAMING.md) for the portable reference policy and read-only helper.
+
+`system_id` MUST remain a stable private random UUID independent of labels; public `card_id` remains separately generated. A rename MUST NOT regenerate either identifier. Shared prefixes support human sorting, not authentication, authorization, routing, global uniqueness, or decentralized-network membership. Any future network identity scheme requires its own specification and consent boundaries. A chosen private handle MUST NOT automatically be copied into a public card or directory.
+
 ### 2.2 Public card
 
 `card_id` is a random UUID independent of private identifiers. `name` and `summary` are owner-reviewed public labels. `topics` lists at most 12 short discussion topics; it is not a tool catalog. `transport` is always `human-mediated`. `updated_at` is a UTC timestamp ending in `Z`, describing this card revision; it is not a freshness or authenticity proof.
