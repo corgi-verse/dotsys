@@ -96,6 +96,8 @@ The prompt asks Dots to perform supported setup and ongoing coordination within 
 
 ## 4. What is in this repository
 
+[Zeke Authorize](interop/zeke-authorize/README.md) is a separately Apache-2.0 licensed phone-approval protocol and runnable single-owner reference. Its QR review, phone passkey/native signature verification, revocation and one-use sandbox execution are separate from DotSys discovery 0.1. Physical phones, complete native apps and live Dots/Zeke integration remain unverified.
+
 [CorgiPanels](interop/corgipanels/README.md) is a separately licensed Apache-2.0 interoperability design for a shared visual project surface, authored by ChatGPT or ZekeChat and opened in Dots' or Zeke's computer. Its original material is isolated in `interop/corgipanels/`; it does not change discovery 0.1 or its operational license. Live integrations remain unverified.
 
 | File or directory | Purpose |

@@ -1,0 +1,42 @@
+
+> @corgi-verse/zeke-authorize@0.1.0 test
+> node --test test/*.test.mjs
+
+(node:303775) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ native decision executes exactly once and writes approved text (7.624212ms)
+✔ QR cannot approve and contains no private signing material (1.753829ms)
+✔ wrong executor and changed action digest refuse execution (3.024785ms)
+✔ expired request cannot be approved (1.229315ms)
+✔ review links stop exposing details after expiry (1.276486ms)
+✔ expired approved request cannot run (1.704714ms)
+✔ denial is signed and terminal (1.624799ms)
+✔ approval signature cannot be substituted for denial or another request (2.143322ms)
+✔ revocation fences every outstanding grant with a new epoch (2.011577ms)
+✔ challenge and enrollment ticket are one-use and expire (2.235038ms)
+✔ view token, requesting client, schemas and policy are enforced (1.574743ms)
+✔ cancel after approval fences execution (4.824973ms)
+✔ external claim is durable and cannot be retried as a second effect (1.744471ms)
+(node:303776) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ full HTTP WebAuthn enrollment, approval, and atomic sandbox execution (123.233957ms)
+✔ WebAuthn refuses missing verification, foreign origin, changed challenge and corrupt signature (97.958298ms)
+✔ HTTP native enrollment proof and native decision interoperate with P-256 DER signatures (40.484025ms)
+✔ revocation during WebAuthn ceremony blocks late approval (41.700476ms)
+✔ two concurrent executions produce one effect (45.050679ms)
+✔ HTTP client ownership, origin and input boundaries (34.122813ms)
+✔ configuration refuses remote HTTP and a non-origin URL (0.539493ms)
+✔ SDK refuses changed queued parameters without calling the connector (48.498571ms)
+✔ SDK records uncertain connector failures without automatic retry (44.814072ms)
+(node:303782) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ published P-256 wire vector matches canonical bytes, action digest and WebAuthn challenge (3.460456ms)
+✔ phone keys, claim consumption and result survive broker restart (30.55039ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 704.35473

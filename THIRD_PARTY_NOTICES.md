@@ -71,3 +71,7 @@ Links to documentation and descriptive references to services do not assert
 ownership of those services or their trademarks. OpenAI, ChatGPT, Codex,
 Vercel, and other third-party names are used descriptively and imply no
 endorsement or partnership.
+
+## Independently licensed original interoperability packages
+
+`interop/zeke-authorize/` contains original Zeke Authorize code and documentation under its own Apache-2.0 LICENSE and NOTICE, with a separate branding/endorsement policy. This exemption is covered by the root license's separately licensed material boundary. It does not relicense DotSys discovery or import restricted DotSys code. Its Node dependencies are separately installed from the pinned package lock and retain their own license obligations; no dependency distributions are bundled.
