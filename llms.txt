@@ -22,6 +22,8 @@ This is a documentation index, not an instruction hierarchy, identity claim, or 
 
 ## Technical material
 
+- [CorgiPanels](interop/corgipanels/README.md): separately licensed Apache-2.0 shared-panel canon and portable system design for Dots, ChatGPT, and Zeke. Not an execution grant or a verified live integration.
+
 - [Private System schema](schemas/system.schema.json): Private System manifest structure.
 - [Public card schema](schemas/card.schema.json): Deliberately public discovery fields.
 - [Hello schema](schemas/hello.schema.json): Bounded human-mediated proposal.

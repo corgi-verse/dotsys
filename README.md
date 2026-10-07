@@ -96,6 +96,8 @@ The prompt asks Dots to perform supported setup and ongoing coordination within 
 
 ## 4. What is in this repository
 
+[CorgiPanels](interop/corgipanels/README.md) is a separately licensed Apache-2.0 interoperability design for a shared visual project surface, authored by ChatGPT or ZekeChat and opened in Dots' or Zeke's computer. Its original material is isolated in `interop/corgipanels/`; it does not change discovery 0.1 or its operational license. Live integrations remain unverified.
+
 | File or directory | Purpose |
 | --- | --- |
 | [PROTOCOL.md](PROTOCOL.md) | Portable starting document and protocol instructions |
@@ -141,5 +143,7 @@ For changes, keep the protocol, schemas, examples, setup prompt, and page claims
 **Experimental v0.1.0. Source-available, with OpenAI-only operational adoption.**
 
 The [Dotsys Dots Source-Available License 1.0](LICENSE) is the controlling license. It permits broad public discovery and documentation use while restricting operational adoption to the scope defined in the license. It is **not an OSI-approved open-source license**. Read the actual terms before adopting, modifying, or redistributing an implementation.
+
+Exception: original CorgiPanels material under [interop/corgipanels/](interop/corgipanels/README.md) has its own [Apache-2.0 license](interop/corgipanels/LICENSE). Hayden Lindley authorizes that separate open-source scope for implementations including Zeke and ChatGPT. Other DotSys materials retain their existing license.
 
 Copyright © 2026 Hayden Lindley. Corgi-Verse is project branding. OpenAI, ChatGPT, and Codex are referenced to identify the intended ecosystem; no affiliation, sponsorship, compatibility certification, or endorsement is implied.

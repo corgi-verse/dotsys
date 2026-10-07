@@ -27,6 +27,8 @@ A locally valid document is not proof of identity, permission, safe networking, 
 
 ## Research and possible next steps
 
+- [CorgiPanels](../interop/corgipanels/README.md): separately licensed open-source shared-panel design, portable contract, tile-bound phone approvals, and acceptance gates for Dots and Zeke. Specification and offline checks; live integration is not yet established.
+
 - [Research and adoption strategy](RESEARCH-AND-ADOPTION.md): source-backed comparisons, discovery choices, pilot evidence, and release gates.
 - [Recipes and Rule Library brainstorm](RULE-LIBRARY-BRAINSTORM.md): proposed community and sharing ideas, not implemented features or approved builds.
 
