@@ -1,0 +1,16 @@
+{
+  "version": "corgipanel/0.1",
+  "panelId": "panel_synthetic",
+  "ownerId": "owner_synthetic",
+  "projectId": "project_synthetic",
+  "revision": 1,
+  "eventSequence": 0,
+  "title": "Example project",
+  "author": "chatgpt",
+  "mode": "connected",
+  "tiles": [
+    {"id": "review", "title": "Review the project", "state": "ready", "dependsOn": [], "references": [], "actions": [{"id": "read-project", "revision": 1, "label": "Read the project", "operation": "read", "resource": "synthetic:project"}]},
+    {"id": "draft", "title": "Prepare a draft", "state": "waiting", "dependsOn": ["review"], "references": [], "actions": [{"id": "create-draft", "revision": 1, "label": "Create one draft", "operation": "create", "resource": "synthetic:project"}]}
+  ],
+  "assets": []
+}
