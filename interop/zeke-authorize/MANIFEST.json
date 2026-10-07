@@ -1,0 +1,167 @@
+{
+  "format": "zeke.authorize.release-manifest/1",
+  "version": "0.1.0",
+  "createdAt": "2026-10-07T18:51:55.477078+00:00",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "cc086acefe31e86ffb13576ba1415c2dd21bb292d001a4e154f99a7b883ad0bf",
+      "bytes": 102
+    },
+    {
+      "path": "BRANDING.md",
+      "sha256": "04d579023732a8b34fdfabe64ebf5346bc4bd343e48342358a715df38f7789bc",
+      "bytes": 1251
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "b78e708ca4e5fa9f865dcfd586f444c6ad8dd4a0d921c198dfdfbee87637f4aa",
+      "bytes": 385
+    },
+    {
+      "path": "PROVENANCE.md",
+      "sha256": "41329ecbe4bf78d6fd76de05171e742f1ca8d642e435c6139397f13ac7289136",
+      "bytes": 1390
+    },
+    {
+      "path": "README.md",
+      "sha256": "afb5eceaa970a87d9dd5269e0b89c44cb46adc95a4e15328c1ebeee502f07c09",
+      "bytes": 5845
+    },
+    {
+      "path": "docs/BASSET-HANDOFF.md",
+      "sha256": "671c25cc43bc855ca2999b66dc1ff44ca786fd8f5d0bb5d96eaba411ba515f27",
+      "bytes": 3341
+    },
+    {
+      "path": "docs/DESIGN.md",
+      "sha256": "a5bfd87a3e0c3c0b796589682628dd22c6c646c268369a96d0e1d30eec283172",
+      "bytes": 22100
+    },
+    {
+      "path": "docs/INTEGRATION.md",
+      "sha256": "24e2c2f709bef2dbe33b703d9563e6fe8268384540fb3e66ffb11926ffc26e6c",
+      "bytes": 7654
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "sha256": "8f16ad12d7868e8302ef871031b813505e3ad38898bf7bb9acd758eceef59422",
+      "bytes": 5566
+    },
+    {
+      "path": "docs/dependency-audit.json",
+      "sha256": "d63cb5a13e1caf2d2ecfafd7fe6546b2c48fcf35b470de626e9672bdaf0b02d6",
+      "bytes": 360
+    },
+    {
+      "path": "docs/protocol-vectors.json",
+      "sha256": "e9e6ade2c63dcc3325902d2bf91a3a03842a3f75b068f27d8497142859ae05ff",
+      "bytes": 2988
+    },
+    {
+      "path": "docs/test-results.txt",
+      "sha256": "41d96441580314a670f40a1bd8c182088586c94472dadd8192cd5f8a5bd2fa3a",
+      "bytes": 2547
+    },
+    {
+      "path": "native/android/PhoneKey.kt",
+      "sha256": "80a673d45f636ef17ec464988f3573648c0a8582a0a23983c77ad04fc9e22771",
+      "bytes": 2910
+    },
+    {
+      "path": "native/ios/PhoneKey.swift",
+      "sha256": "9d8aa48fbb251e72f40fc59f8ac1c40216c0890be327082af683aa09eb27628e",
+      "bytes": 2959
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "43b10ba91b6850d30377da411ae2cbb95404d3bfda64d0afdde0cf7b856e6566",
+      "bytes": 24312
+    },
+    {
+      "path": "package.json",
+      "sha256": "fe5359decfe46a0aefbe8726a4142c4e4f10d69225235099a2947c6cf6a798b2",
+      "bytes": 365
+    },
+    {
+      "path": "public/app.js",
+      "sha256": "b032c906b3e2980f610a567f6bb6d64fa78e0309c08e68b27037b4922681e259",
+      "bytes": 2084
+    },
+    {
+      "path": "public/approve.html",
+      "sha256": "ed85cf90c6b60ccbddacb16ce38751855660e58f8265cedf1d49818dd9dbb055",
+      "bytes": 1194
+    },
+    {
+      "path": "public/enroll.html",
+      "sha256": "7f2fa3eb787cccaa0b9a4ffd454db46a841c14b520ab6c068dc8b123885f51f5",
+      "bytes": 1121
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "a47fac5dba1a31efd7278b477510b0dde72e10556eeeacebae9dd41dd6adce0a",
+      "bytes": 1962
+    },
+    {
+      "path": "public/phone.js",
+      "sha256": "7eab4bae0b811a05338ea6e02e4e31ac6f1d09c1048f13d9f6bf54e4e8ff2a69",
+      "bytes": 2712
+    },
+    {
+      "path": "public/style.css",
+      "sha256": "c99293682effaf282014b82050062cb46716968cadc67b3a5851390583c3ab6c",
+      "bytes": 2515
+    },
+    {
+      "path": "src/core.mjs",
+      "sha256": "e5e69eb8ad8abb02c13e28c6be3cea262fdb5c00790ebd77e4af6ad9c092dd90",
+      "bytes": 9884
+    },
+    {
+      "path": "src/sdk.mjs",
+      "sha256": "0e68a421182425f0aea7ba39820f199a89e07299198f2cc98cd0ea395350660b",
+      "bytes": 1706
+    },
+    {
+      "path": "src/server.mjs",
+      "sha256": "12c407124750e840f88d15fbca707fde86947942e49db1ea79c5c76aebe00a94",
+      "bytes": 11086
+    },
+    {
+      "path": "test/core.test.mjs",
+      "sha256": "c0d720ca4f3e2546440c6ce8fe9358ecbc8f3a1642a449e019a1d0ea92cec2b9",
+      "bytes": 6132
+    },
+    {
+      "path": "test/http.test.mjs",
+      "sha256": "8cf35e16083e78c61295ef34da895a91f14720b392ffe9325c6312ce7dda6baa",
+      "bytes": 10940
+    },
+    {
+      "path": "test/persistence.test.mjs",
+      "sha256": "3805a0b70f482a9613a3026df2eeb6901bfc0d14344cf64905e164f166ea39ce",
+      "bytes": 2495
+    },
+    {
+      "path": "tools/init.mjs",
+      "sha256": "b3f09d824c8baf8c533f8e160ea1db56514028af4b2b1722c009ee8c77d28d7b",
+      "bytes": 1510
+    },
+    {
+      "path": "tools/revoke.mjs",
+      "sha256": "b9ff0acd4bddc2295c8ad23377ac0aeb30bd4c8353a24ef4ae32308cbc718e08",
+      "bytes": 474
+    },
+    {
+      "path": "tools/ticket.mjs",
+      "sha256": "f59401f9e70b78a00d6bc611f170f692e6b9a9d7097e1b885567e6113d70d4ea",
+      "bytes": 640
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "description": "Synthetic public interoperability fixture; private test key discarded, not an enrolled device.",
+  "payload": {
+    "v": 1,
+    "origin": "https://auth.example.org",
+    "requestId": "00000000-0000-4000-8000-000000000001",
+    "ownerId": "vector-owner",
+    "clientId": "zeke-chat",
+    "agentId": "zeke",
+    "executorId": "vector-runner",
+    "kind": "sandbox.note.append",
+    "target": "sandbox:notes",
+    "parameters": {
+      "text": "Exact note with Unicode: café 🐶\nand a second line."
+    },
+    "createdAt": 1791396000000,
+    "expiresAt": 1791396120000,
+    "epoch": 7,
+    "nonce": "public-test-vector-nonce-not-live-authority"
+  },
+  "canonicalPayload": "{\"agentId\":\"zeke\",\"clientId\":\"zeke-chat\",\"createdAt\":1791396000000,\"epoch\":7,\"executorId\":\"vector-runner\",\"expiresAt\":1791396120000,\"kind\":\"sandbox.note.append\",\"nonce\":\"public-test-vector-nonce-not-live-authority\",\"origin\":\"https://auth.example.org\",\"ownerId\":\"vector-owner\",\"parameters\":{\"text\":\"Exact note with Unicode: café 🐶\\nand a second line.\"},\"requestId\":\"00000000-0000-4000-8000-000000000001\",\"target\":\"sandbox:notes\",\"v\":1}",
+  "actionHash": "9AkoP_wKbhbgwhONdm4w_TWTWazS9bT6BZ8dbMUYcXE",
+  "decision": {
+    "actionHash": "9AkoP_wKbhbgwhONdm4w_TWTWazS9bT6BZ8dbMUYcXE",
+    "decision": "approve",
+    "epoch": 7,
+    "expiresAt": 1791396120000,
+    "nonce": "public-test-vector-nonce-not-live-authority",
+    "origin": "https://auth.example.org",
+    "ownerId": "vector-owner",
+    "requestId": "00000000-0000-4000-8000-000000000001"
+  },
+  "message": "zeke.authorize.decision/1\n{\"actionHash\":\"9AkoP_wKbhbgwhONdm4w_TWTWazS9bT6BZ8dbMUYcXE\",\"decision\":\"approve\",\"epoch\":7,\"expiresAt\":1791396120000,\"nonce\":\"public-test-vector-nonce-not-live-authority\",\"origin\":\"https://auth.example.org\",\"ownerId\":\"vector-owner\",\"requestId\":\"00000000-0000-4000-8000-000000000001\"}",
+  "messageUtf8Hex": "7a656b652e617574686f72697a652e6465636973696f6e2f310a7b22616374696f6e48617368223a2239416b6f505f774b6268626777684f4e646d34775f54575457617a5339625436425a3864624d5559635845222c226465636973696f6e223a22617070726f7665222c2265706f6368223a372c22657870697265734174223a313739313339363132303030302c226e6f6e6365223a227075626c69632d746573742d766563746f722d6e6f6e63652d6e6f742d6c6976652d617574686f72697479222c226f726967696e223a2268747470733a2f2f617574682e6578616d706c652e6f7267222c226f776e65724964223a22766563746f722d6f776e6572222c22726571756573744964223a2230303030303030302d303030302d343030302d383030302d303030303030303030303031227d",
+  "webAuthnChallenge": "XGmWQV9qqO8q-iZTmeS4AgVO0TF5vJX1s4tpG-tBzB8",
+  "spki": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEpESvWUyz+Gc26tyD/ZKEq+q7QtfM\nFXl+erDf8+qvagHG16hqNZdbMp6TMhwpW5v6tavKXsXwlUO8qbuvJHaIdQ==\n-----END PUBLIC KEY-----\n",
+  "signatureDERBase64url": "MEUCIQCS1cvlncfOx7LDYGz88Rg26mElx4gtMyQSxa966B9FiQIgBcRyZxBXOnK2BlnYG1kQ3aKcErWZhfxpU1-crNR0MiQ"
+}

@@ -43,3 +43,5 @@ This is a documentation index, not an instruction hierarchy, identity claim, or 
 - [Dotsys on GitHub](https://github.com/corgi-verse/dotsys): Canonical source repository.
 
 - [Public landing page](https://corgi-verse.github.io/dotsys/): Setup and protocol downloads with a copyable operating prompt.
+
+- [Zeke Authorize](interop/zeke-authorize/README.md): separately Apache-2.0 licensed exact-action phone approval protocol and runnable reference; 24 software tests pass, live phones and Dots/Zeke integration remain unverified.
